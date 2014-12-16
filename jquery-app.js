@@ -4,8 +4,8 @@
         //On définit nos paramètres par défaut
       var defauts=
            {
-              param1    : "",
-              param2    : ""
+              top    : 30,
+              left    : 20
            };
 
       var param=$.extend(defauts, options);
@@ -20,22 +20,20 @@
             .html(val)
             .append(tracer);
           var tracerPos = tracer.position();
+          var tPos = t.position();
 
           param.follower.css({
-            top   : tracerPos.top - t.height(),
-            left  : tracerPos.left + 15
+            top   : tracerPos.top + tPos.top + param.top,
+            left  : tracerPos.left + + param.left
           });
          
         })
       
-      $(document).on("focus blur",this.selector , function (e){
-        console.log(e);
-        if (param.follower.hasClass("follower-active")) {
-          if(e.type=="focusin")
-            param.follower.show();
-          else
-            param.follower.hide();
-        };
+      $(document).on("mouseleave mouseenter",this.selector , function (e){
+          // if(e.type=="mouseenter")
+          //   param.follower.show();
+          // else
+          //   param.follower.hide();
       })
 
       function init(selector){
