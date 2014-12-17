@@ -1,5 +1,8 @@
 @follerC : rgba(36,36,36,0.8);
 @follerBg : rgba(36,36,36,0.8);
+@follerBgHover : rgba(0,0,0,0.2);
+@follerW : 150;
+@follerH : 32;
 
 #input, #output {
     font:14px/1 monospace;
@@ -22,21 +25,22 @@ textarea.caretposition{ width: 100%; min-height: 250px; padding: 10px;}
 #sub {
 	position: absolute;
 	background-color: @follerBg;
-	padding: 5px;
+	padding: 0px;
 	color: #fff;
-    width: 150px;
-
+    display: inline-block;
+    width: unit(@follerW ,px);
+    line-height: unit(@follerH, px);
+    height: unit(@follerH, px);
     -webkit-transition: all 30ms linear;
     -moz-transition: all 30ms linear;
     -ms-transition: all 30ms linear;
     -o-transition: all 30ms linear;
     transition: all 30ms linear;
-
-border-radius: 3px;
+    border-radius: 3px;
 
     &:before{
-        margin-left: calc(50% - 8px);
-        margin-top: -13px;
+        margin-left: (@follerW/2) - 8px;
+        margin-top: -8px;
         content :"";
         position: absolute;
         width: 0;
@@ -47,7 +51,19 @@ border-radius: 3px;
 
     }
     & div {
-    	 display: inline;
+    	 display: inline-block;
+         margin-top: -3px;
+        height: unit(@follerH, px);
+        & a {
+            height: unit(@follerH - 1, px);
+            vertical-align: middle;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            &:focus,
+            &:hover{
+                background-color: @follerBgHover;
+            }
+        }
     	 & input{
     	 	color:#000;
     	 }

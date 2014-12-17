@@ -21,9 +21,12 @@ textarea.caretposition {
 #sub {
   position: absolute;
   background-color: rgba(36, 36, 36, 0.8);
-  padding: 5px;
+  padding: 0px;
   color: #fff;
+  display: inline-block;
   width: 150px;
+  line-height: 32px;
+  height: 32px;
   -webkit-transition: all 30ms linear;
   -moz-transition: all 30ms linear;
   -ms-transition: all 30ms linear;
@@ -32,8 +35,8 @@ textarea.caretposition {
   border-radius: 3px;
 }
 #sub:before {
-  margin-left: calc(42%);
-  margin-top: -13px;
+  margin-left: 67px;
+  margin-top: -8px;
   content: "";
   position: absolute;
   width: 0;
@@ -43,7 +46,19 @@ textarea.caretposition {
   border-color: transparent transparent rgba(36, 36, 36, 0.8) transparent;
 }
 #sub div {
-  display: inline;
+  display: inline-block;
+  margin-top: -3px;
+  height: 32px;
+}
+#sub div a {
+  height: 31px;
+  vertical-align: middle;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#sub div a:focus,
+#sub div a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 #sub div input {
   color: #000;
