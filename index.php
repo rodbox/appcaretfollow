@@ -9,7 +9,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="apple-touch-icon" href="images/ios_icon.png"/>
         <link rel="apple-touch-startup-image" href="images/ios_startup.png" />
-
+    <link rel="stylesheet" href="http://demo.rodbox.fr/appdemo/css/style.css">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         
@@ -21,7 +21,12 @@
                    
     <h1>Demo</h1>
     <textarea class="caretposition" data-follower="#sub"></textarea>
-    <div id="sub"><input type="text" name="count" class="w-20 text-center" maxlength="2"><input type="text" name="tab content" class="w-80"></div>
+    <div id="sub" class="text-center">
+    <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-xs c-4"><i class="glyphicon glyphicon-pencil"></i></a>
+        <a href="#" class="btn btn-xs c-4"><i class="glyphicon glyphicon-edit"></i></a>
+        <a href="#" class="btn btn-xs c-4"><i class="glyphicon glyphicon-comment"></i></a></div>
+    </div>
                 </div>
                 <div class="col-md-12">
                    <div class="result"></div> 
