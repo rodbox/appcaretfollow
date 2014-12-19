@@ -11,7 +11,6 @@
 
       var param=$.extend(defauts, options);
 
-
         $(document).on("keyup keypress click",this.selector , function (){
           var t=$(this);
           var tracer = $('<span>',{"id":"tracer"}).html("x");

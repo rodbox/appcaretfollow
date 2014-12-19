@@ -29,7 +29,7 @@
         <a href="#" class="btn btn-xs c-4"><i class="glyphicon glyphicon-edit"></i></a>
         <a href="#" class="btn btn-xs c-4"><i class="glyphicon glyphicon-comment"></i></a></div>
     </div>
-                </div>
+</div>
               
 
         </div>
